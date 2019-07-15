@@ -1,0 +1,14 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "item": "Apple",
+      "description": " Red colored fruit"
+    },
+    {
+      "id": 2,
+      "item": "Mango",
+      "description": "Yellow colored fruit"
+    }
+  ]
+}
