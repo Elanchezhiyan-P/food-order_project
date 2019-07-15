@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body >
+<h1>Food-Order</h1>
+<table>
+  <tr>
+  <th>Name</th>
+  <th>Batch</th>
+  <th>Email</th>
+  <th>Contact</th>
+</tr>
+<tr>
+  <td>Elanchezhiyan P</td>
+  <td>2019</td>
+  <td>elanche97@gmail.com</td>
+  <td>9942644999 / 8075207784 </td>
+</tr>
+
+</table>
+<br><br><br>
+<table>
+  <th>Id</th>
+  <th>Item</th>
+  <th>Description</th>
+  
+  <tr *ngFor = "let product of products">
+    <td>{{product.id}}</td>
+    <td>{{product.item}}</td>
+    <td>{{product.description}}</td>
+    <td [routerLink] = "['/updateProduct', product.id]"><a>Edit</a></td>
+    <td (click) = "deleteProduct(product.id)"><a>Delete</a></td>
+  </tr>
+</table>
+<br>
+<a routerLink = '/product'> Add new food item </a>
+</body>

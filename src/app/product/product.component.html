@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body >
+<h2>
+  Add a new Food item
+</h2>
+
+<form id = "formNewProduct" name = "formNewProduct" #productData = "ngForm" (ngSubmit) = "addNewProduct(productData.value)">
+  <label>ID: </label><input type = "text" name="id" id="id" placeholder="id" ngModel><br>
+  <label>Item: </label><input type = "text" name="item" id="item" placeholder="item" ngModel><br>
+  <label>Description: </label><input type = "text" name="description" id="description" placeholder="description" ngModel><br>
+  <input type="submit" value = "Add Product">
+</form>
+
+<br>
+<h3 *ngIf = "isAdded" >{{confirmationString}}</h3>
+
+<a routerLink = "/"> back </a>
+
+</body>
